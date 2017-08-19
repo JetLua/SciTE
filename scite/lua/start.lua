@@ -209,7 +209,7 @@ function L:autoComplete(s)
         return
     end
 
-    for x in string.gfind(txt, "[%w_-]+") do
+    for x in string.gmatch(txt, "[%w_-]+") do
         flag = true
         if string.find(string.upper(x), "^" .. string.upper(str)) then
             for k, v in pairs(li) do
